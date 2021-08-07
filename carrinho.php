@@ -66,7 +66,7 @@ class CarrinhoDeCompras
         $total = 0;
         
         foreach ($this->carrinho as $produto) {
-            $total += $produto->valor;
+            $total += $produto->valor * $produto->quantidade;
         }
         
         return number_format($total,2,',','.');

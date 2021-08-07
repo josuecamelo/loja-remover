@@ -1,6 +1,6 @@
 <?php
-    require_once('database.php');
-    require_once('sessions.php');
+require_once('database.php');
+require_once('sessions.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <!-- Estilos customizados para esse template -->
     <link href="css/album.css" rel="stylesheet">
-    
+
     <!--External Fonts-->
     <link href='//fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Serif" rel="stylesheet">
@@ -23,13 +23,11 @@
 <body>
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
     <h5 class="my-0 mr-md-auto font-weight-normal">Lojinha da Esquina S/A</h5>
-<!--    <nav class="my-2 my-md-0 mr-md-3">-->
-<!--        <a class="p-2 text-dark" href="#">Features</a>-->
-<!--        <a class="p-2 text-dark" href="#">Premium</a>-->
-<!--        <a class="p-2 text-dark" href="#">Suporte</a>-->
-<!--        <a class="p-2 text-dark" href="#">Preços</a>-->
-<!--    </nav>-->
-<!--    <a class="btn btn-outline-primary" href="#">Cadastro</a>-->
+    <button class="btn btn-primary" id="cart">
+        <i class="fa fa-shopping-cart"></i> Total no Carrinho: R$<span class="badge total">0,00</span>
+    </button>
+    
+    
 </div>
 
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
@@ -53,11 +51,10 @@
             </div>
         </div>
     </footer>
-    
-    <?php require_once('componentes/carrinho_listar.php') ?>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src=" bootstrap/js/bootstrap.min.js "></script>
 <script src="js/script.js"></script>
 </body>

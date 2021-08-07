@@ -1,4 +1,25 @@
 $(document).ready(function(){
+    atualizarValorCarrinho = function(){
+        $.ajax({
+            url : "carrinho-controller.php",
+            type : 'get',
+            data : {
+
+            },
+            beforeSend : function(){
+
+            }
+        })
+            .done(function(msg){
+                $('.total').html(msg);
+            })
+            .fail(function(jqXHR, textStatus, msg){
+                alert(msg);
+            });
+    }
+
+    atualizarValorCarrinho();
+
     $('.adicionar').click(function(){
         let produto = $(this).data('produto-id');
 
@@ -9,11 +30,11 @@ $(document).ready(function(){
 
             },
             beforeSend : function(){
-              console.log("ENVIANDO...");
+
             }
         })
             .done(function(msg){
-                console.log(msg);
+                atualizarValorCarrinho();
             })
             .fail(function(jqXHR, textStatus, msg){
                 alert(msg);
@@ -30,11 +51,11 @@ $(document).ready(function(){
 
             },
             beforeSend : function(){
-                console.log("ENVIANDO...");
+
             }
         })
             .done(function(msg){
-                console.log(msg);
+                atualizarValorCarrinho();
             })
             .fail(function(jqXHR, textStatus, msg){
                 alert(msg);
@@ -51,11 +72,11 @@ $(document).ready(function(){
 
             },
             beforeSend : function(){
-                console.log("ENVIANDO...");
+
             }
         })
             .done(function(msg){
-                console.log(msg);
+                atualizarValorCarrinho();
             })
             .fail(function(jqXHR, textStatus, msg){
                 alert(msg);
@@ -72,11 +93,11 @@ $(document).ready(function(){
 
             },
             beforeSend : function(){
-                console.log("ENVIANDO...");
+
             }
         })
             .done(function(msg){
-                console.log(msg);
+                atualizarValorCarrinho();
             })
             .fail(function(jqXHR, textStatus, msg){
                 alert(msg);

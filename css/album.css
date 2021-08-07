@@ -108,3 +108,23 @@ Grid de Produtos
   max-width: 100%;
   height: 250px;
 }
+
+#cart{
+  font-size: 18px;
+  font-weight: bold;
+
+}
+
+.badge {
+  background-color: #6394F8;
+  border-radius: 10px;
+  color: white;
+  display: inline-block;
+  font-size: 18px;
+  line-height: 1;
+  padding: 3px 7px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  margin-top: -2px;
+}
