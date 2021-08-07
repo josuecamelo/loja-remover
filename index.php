@@ -1,5 +1,6 @@
 <?php
     require_once('database.php');
+    require_once('sessions.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -10,12 +11,9 @@
     <title>Loja Virtual</title>
     <!--Descrição-->
     <meta name="description" content="Lojinha">
-    <!--CSS-->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
     <!--Bootstrap-->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <!-- Estilos customizados para esse template -->
-    <link href="css/style.css" rel="stylesheet">
     <link href="css/album.css" rel="stylesheet">
     
     <!--External Fonts-->
@@ -55,9 +53,12 @@
             </div>
         </div>
     </footer>
+    
+    <?php require_once('componentes/carrinho_listar.php') ?>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src=" bootstrap/js/bootstrap.min.js "></script>
+<script src="js/script.js"></script>
 </body>
 </html>
