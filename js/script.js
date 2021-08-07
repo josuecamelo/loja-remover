@@ -18,7 +18,22 @@ $(document).ready(function(){
             });
     }
 
+    listarCarrinho = function(){
+        $.ajax({
+            url : "componentes/carrinho_listar.php",
+            type : 'get',
+        })
+            .done(function(msg){
+                $('.tableCarrinho').html(msg);
+            })
+            .fail(function(jqXHR, textStatus, msg){
+                alert(msg);
+            });
+    }
+
+
     atualizarValorCarrinho();
+    listarCarrinho();
 
     $('.adicionar').click(function(){
         let produto = $(this).data('produto-id');
@@ -35,6 +50,7 @@ $(document).ready(function(){
         })
             .done(function(msg){
                 atualizarValorCarrinho();
+                listarCarrinho();
             })
             .fail(function(jqXHR, textStatus, msg){
                 alert(msg);
@@ -56,6 +72,7 @@ $(document).ready(function(){
         })
             .done(function(msg){
                 atualizarValorCarrinho();
+                listarCarrinho();
             })
             .fail(function(jqXHR, textStatus, msg){
                 alert(msg);
@@ -77,6 +94,7 @@ $(document).ready(function(){
         })
             .done(function(msg){
                 atualizarValorCarrinho();
+                listarCarrinho();
             })
             .fail(function(jqXHR, textStatus, msg){
                 alert(msg);
@@ -98,6 +116,7 @@ $(document).ready(function(){
         })
             .done(function(msg){
                 atualizarValorCarrinho();
+                listarCarrinho();
             })
             .fail(function(jqXHR, textStatus, msg){
                 alert(msg);

@@ -23,11 +23,16 @@ require_once('sessions.php');
 <body>
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
     <h5 class="my-0 mr-md-auto font-weight-normal">Lojinha da Esquina S/A</h5>
-    <button class="btn btn-primary" id="cart">
-        <i class="fa fa-shopping-cart"></i> Total no Carrinho: R$<span class="badge total">0,00</span>
-    </button>
-    
-    
+    <div class="dropdown">
+        <button class="dropbtn btn btn-primary" id="cart">
+            <i class="fa fa-shopping-cart"></i> Total no Carrinho: R$<span class="badge total">0,00</span>
+        </button>
+        <div class="dropdown-content">
+          <div class="tableCarrinho">
+          
+          </div>
+        </div>
+    </div>
 </div>
 
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
@@ -43,7 +48,7 @@ require_once('sessions.php');
             </div>
         </div>
     </div>
-
+    
     <footer class="pt-4 my-md-5 pt-md-5 border-top">
         <div class="row">
             <div class="col-6 col-md">
@@ -57,5 +62,45 @@ require_once('sessions.php');
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src=" bootstrap/js/bootstrap.min.js "></script>
 <script src="js/script.js"></script>
+<style>
+    .dropbtn {
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-content {
+        display: none;
+        left: -100px;
+        position: absolute;
+        background-color: #f1f1f1;
+        width: 100% !important;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown-content a:hover {background-color: #ddd;}
+    .dropdown:hover .dropdown-content {display: block;}
+    .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+    table.table > tbody > tr td, table.table > tbody > tr th, table.table > thead > tr td, table.table > thead > tr th {
+        font-size: 11px;
+        padding: 3px 7px !important;
+        vertical-align: middle;
+    }
+    
+    .table tbody>tr>td {
+        padding: 0 !important;
+    }
+</style>
 </body>
 </html>
